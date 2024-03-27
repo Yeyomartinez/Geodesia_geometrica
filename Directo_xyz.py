@@ -1,20 +1,54 @@
 import math
 
 def elipsoides():
-    print("1) Internacional")
-    print("2) GRS - 84")
-    Seleccionar_variable = int(input("Seleccione el elipsoide a utilizar: "))
+    print("Seleccione el elipsoide a utilizar:")
+    print("1) Internacional (1924)")
+    print("2) GRS - 80")
+    print("3) WGS - 84")
+    print("4) Airy (1830)")
+    print("5) Bessel (1841)")
+    print("6) Clarke (1866)")
+    print("7) Everest (1830)")
+    print("8) Hayford (1910)")
+    print("9) Krassovsky (1940)")
+    print("10) WGS - 72")
+    
+    Seleccionar_variable = int(input("Ingrese el número correspondiente al elipsoide: "))
     
     if Seleccionar_variable == 1:
-        a = 6378388
-        e = 0.006722670022
+        a = 6378388.0
+        e = 0.00672267002278908
     elif Seleccionar_variable == 2:
-        a = 6378137 
-        e = 0.00669438002290  
+        a = 6378137.0
+        e = 0.00669438002290
+    elif Seleccionar_variable == 3:
+        a = 6378137.0
+        e = 0.006694379990
+    elif Seleccionar_variable == 4:
+        a = 6377563.396
+        e = 0.00667054004120
+    elif Seleccionar_variable == 5:
+        a = 6377397.155
+        e = 0.006674372229629
+    elif Seleccionar_variable == 6:
+        a = 6378206.4
+        e = 0.006768658
+    elif Seleccionar_variable == 7:
+        a = 6377276.345
+        e = 0.006637847
+    elif Seleccionar_variable == 8:
+        a = 6378388.0
+        e = 0.00672267002278908
+    elif Seleccionar_variable == 9:
+        a = 6378245.0
+        e = 0.006693421622965943
+    elif Seleccionar_variable == 10:
+        a = 6378135.0
+        e = 0.006694318
     else:
         print("OPCIÓN NO VÁLIDA")
     
-    return a, e 
+    return a, e
 
 def seleccionar_phi():
     Seleccionar_norte_sur = int(input("Seleccione (1) si su latitud es norte, o a su vez seleccione (2) si su latitud es sur: "))
